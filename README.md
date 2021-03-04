@@ -1,7 +1,7 @@
 # RFID_GUI
 
 ![Works with Windows](https://img.shields.io/badge/Works_with-Win-blue?style=flat-square)
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 
 ![](./images/cover.png)
 
