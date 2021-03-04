@@ -2,7 +2,7 @@
 
 ![Works with Windows](https://img.shields.io/badge/Works_with-Win-blue?style=flat-square)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-[![](https://img.shields.io/badge/follow%20me%20on-WeChat-green.svg)](https://guangchuangyu.github.io/blog_images/biobabble.jpg)
+[![](https://img.shields.io/badge/connect%20with%20me%20on-WhatsApp-green.svg)](https://wa.me/7606814973)
 
 ![](./images/cover.png)
 
