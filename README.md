@@ -17,8 +17,17 @@ $ git clone https://github.com/krishnamecho/RFID_GUI.git
 ```
 
 ## :rocket: Get started 
+
+### Method-1
 1 - Install python latest version from the link provided in the prerequisite in your system.
 
 2 - Double click the runner.bat file.
 
-3 - The bat file shall be execute the process.py file.
+3 - The bat file shall be execute the gui.py file.
+
+### Method-2
+Run the following code in either command prompt or anaconda prompt
+```sh
+$ pip install -r requirements.txt
+$ python gui.py
+```
