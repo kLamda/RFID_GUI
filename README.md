@@ -2,6 +2,7 @@
 
 ![Works with Windows](https://img.shields.io/badge/Works_with-Win-blue?style=flat-square)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![](https://img.shields.io/badge/follow%20me%20on-WeChat-green.svg)](https://guangchuangyu.github.io/blog_images/biobabble.jpg)
 
 ![](./images/cover.png)
 
@@ -31,3 +32,7 @@ Run the following code in either command prompt or anaconda prompt
 $ pip install -r requirements.txt
 $ python gui.py
 ```
+
+## ⭐ Preview
+![](./images/preview.JPG)
+
