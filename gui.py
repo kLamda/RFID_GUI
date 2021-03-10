@@ -10,12 +10,16 @@
 #================================================Dependencies===============================================================
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import (QApplication, QMainWindow, QPushButton,
+                             QToolTip, QMessageBox, QLabel)
 import os
 import pandas as pd
 import argparse
 import numpy as np
 from csv import writer
 import datetime
+
+from new import Window3
 
 #================================================End Dependency=============================================================
 
@@ -33,7 +37,9 @@ args = my_parser.parse_args()
 
 #=======================================================GUI==================================================================
 
-class Ui_MainWindow(object):
+
+
+class Ui_MainWindow(QtWidgets.QWidget):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1102, 612)
@@ -186,8 +192,8 @@ class Ui_MainWindow(object):
         self.pushButton_upload.clicked.connect(self.csvUpload)
         self.textBrowser_output.setText(args.db)
 
-        final = []
-        final.append(datetime.datetime.now().strftime(
+        self.final = []
+        self.final.append(datetime.datetime.now().strftime(
             "%d-%b-%Y (%H:%M:%S.%f)"))
 
         if(args.s):
@@ -200,13 +206,14 @@ class Ui_MainWindow(object):
             self.pushButto_register.hide()
             self.pushButto_edit.show()
             print(self.data.loc[self.data['Serial'] == args.s].to_numpy()[0].tolist())
-            final += list(self.data.loc[self.data['Serial']
+            self.final += list(self.data.loc[self.data['Serial']
                                         == args.s].to_numpy()[0].tolist())
-            final += ['Granted']
+            self.final += ['Granted']
             self.textBrowser_name.setText(
                 self.data.loc[self.data['Serial'] == args.s].Name.to_numpy()[0])
             self.textBrowser_id.setText(self.data.loc[self.data['Serial']==args.s]['Employee ID'].to_numpy()[0])
             self.textBrowser_gender.setText(self.data.loc[self.data['Serial']==args.s].Gender.to_numpy()[0])
+            self.pushButto_edit.clicked.connect(self.register)
         else:
             self.pushButto_denied.setStyleSheet('background-color : red')
             self.pushButto_register.show()
@@ -214,14 +221,27 @@ class Ui_MainWindow(object):
             self.textBrowser_name.setText("Invalid")
             self.textBrowser_id.setText("Invalid")
             self.textBrowser_gender.setText("Invalid")
-            final += [args.s, 'NA', 'NA', 'NA', 'Not Granted' ]
+            self.final += [args.s, None, None, None, 'Not Granted' ]
+            self.pushButto_register.clicked.connect(self.register)
 
         with open(os.path.join(os.getcwd(), 'output.csv'), 'a') as f:
             writer_obj = writer(f)
-            writer_obj.writerow(final)
+            writer_obj.writerow(self.final)
             f.close()
-        print(final)
+
+    def register(self):
+        # name, done1 = QtWidgets.QInputDialog.getText(self, 'Input Dialog', "enter Name")
+        # self.w = Window2()
+        # self.w.show()
+        # self.hide()
+        self.w = QtWidgets.QMainWindow()
+        print(self.final)
+        self.u = Window3(self.final[1], self.final[2], self.final[3], self.final[4], args.db)
+        self.u.setupUi(self.w)
+        self.w.show()
         
+
+
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -246,6 +266,7 @@ class Ui_MainWindow(object):
         self.textBrowser_output.setText(self.csv_name)
         self.data = pd.read_csv(self.csv_name)
         # print("Uploaded Data \n", self.data)
+
 
 
 if __name__ == "__main__":
