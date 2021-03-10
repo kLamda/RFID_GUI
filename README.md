@@ -34,9 +34,9 @@ $ python gui.py
 ```
 
 ## ⭐ Preview
-If granted
+### If granted
 ![](./images/grant.JPG)
-If denied
+### If denied
 ![](./images/deny.JPG)
 
 ### Parsing values
