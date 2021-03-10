@@ -223,7 +223,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "GUI"))
         self.label_serial.setText(_translate("MainWindow", "Serial Number"))
         self.pushButto_granted.setText(_translate("MainWindow", "Granted"))
         self.pushButto_denied.setText(_translate("MainWindow", "Denied"))
