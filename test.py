@@ -184,6 +184,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         self.pushButton_upload.clicked.connect(self.csvUpload)
+        self.textBrowser_output.setText(args.db)
 
         final = []
         final.append(datetime.datetime.now().strftime(
