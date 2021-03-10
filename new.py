@@ -88,9 +88,14 @@ class Window3(object):
         self.textBrowser_edit_serial.setObjectName("textBrowser_edit_serial")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(660, 390, 111, 41))
+        self.label_prog = QtWidgets.QLabel(self.centralwidget)
+        self.label_prog.setGeometry(QtCore.QRect(25, 400, 200, 31))
         font = QtGui.QFont()
         font.setFamily("Prestige Elite Std")
         font.setPointSize(11)
+        self.label_prog.setFont(font)
+        self.label_prog.setText("")
+        self.label_prog.setObjectName("label_prog")
         font.setBold(True)
         font.setWeight(75)
         self.pushButton.setFont(font)
@@ -127,6 +132,7 @@ class Window3(object):
         
         print(self.data)
         self.data.to_csv(self.db, index = False)
+        self.label_prog.setText("CSV file Updated")
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate

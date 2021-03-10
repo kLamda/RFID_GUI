@@ -191,6 +191,25 @@
      <string>Submit</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_prog">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>400</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe Script</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
