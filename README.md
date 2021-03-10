@@ -32,14 +32,15 @@ Run the following code in either command prompt or anaconda prompt
 $ pip install -r requirements.txt
 $ python gui.py
 ```
+### Parsing values
+```sh
+$ python gui.py --db <path_to_input_db_in_string_format> --s <integer_serial_no> 
+```
 
 ## ⭐ Preview
 ### If granted
 ![](./images/grant.JPG)
 ### If denied
 ![](./images/deny.JPG)
-
-### Parsing values
-```sh
-$ python gui.py --db <path_to_input_db_in_string_format> --s <integer_serial_no> 
-```
+### Update or Register a Serial ID
+![](./images/register.JPG)
