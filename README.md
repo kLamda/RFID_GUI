@@ -34,5 +34,12 @@ $ python gui.py
 ```
 
 ## ⭐ Preview
-![](./images/preview.JPG)
+If granted
+![](./images/grant.JPG)
+If denied
+![](./images/deny.JPG)
 
+### Parsing values
+```sh
+$ python test.py --s <integer_serial_no> --db <path_to_input_db_in_string_format>
+```
