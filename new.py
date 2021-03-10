@@ -108,7 +108,7 @@ class Window3(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         self.textBrowser_edit_serial.setText(str(self.serial))
-        self.lineEdit_name.setText(self.name)
+        self.lineEdit_name.setText(str(self.name))
         self.lineEdit_id.setText(self.id)
         self.lineEdit_gender.setText(self.gender)
 
@@ -126,7 +126,7 @@ class Window3(object):
                 self.serial, self.lineEdit_name.text(), self.lineEdit_id.text(), self.lineEdit_gender.text()]
         
         print(self.data)
-        self.data.to_csv(self.db)
+        self.data.to_csv(self.db, index = False)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
