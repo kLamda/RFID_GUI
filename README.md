@@ -41,5 +41,5 @@ $ python gui.py
 
 ### Parsing values
 ```sh
-$ python test.py --s <integer_serial_no> --db <path_to_input_db_in_string_format>
+$ python gui.py --s <integer_serial_no> --db <path_to_input_db_in_string_format>
 ```
