@@ -111,7 +111,7 @@ class Window3(object):
                                       "border-radius : 10px;")
         self.pushButton.setObjectName("pushButton")
         self.label_prog = QtWidgets.QLabel(self.centralwidget)
-        self.label_prog.setGeometry(QtCore.QRect(25, 400, 161, 31))
+        self.label_prog.setGeometry(QtCore.QRect(25, 400, 250, 31))
         font = QtGui.QFont()
         font.setFamily("Segoe Script")
         font.setPointSize(16)
