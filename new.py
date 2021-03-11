@@ -132,7 +132,7 @@ class Window3(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         self.textBrowser_edit_serial.setText(str(self.serial))
-        self.lineEdit_name.setText(str(self.name))
+        self.lineEdit_name.setText(self.name)
         self.lineEdit_id.setText(self.id)
         self.lineEdit_gender.setText(self.gender)
 
