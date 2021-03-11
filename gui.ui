@@ -391,18 +391,6 @@ border-radius: 10px;</string>
      <height>26</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuMain">
-    <property name="title">
-     <string>Main</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuUser">
-    <property name="title">
-     <string>User</string>
-    </property>
-   </widget>
-   <addaction name="menuMain"/>
-   <addaction name="menuUser"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

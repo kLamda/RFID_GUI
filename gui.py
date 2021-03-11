@@ -194,19 +194,9 @@ class Ui_MainWindow(QtWidgets.QWidget):
                                           "border-radius: 10px;")
         self.pushButto_edit.setObjectName("pushButto_edit")
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1102, 26))
-        self.menubar.setObjectName("menubar")
-        self.menuMain = QtWidgets.QMenu(self.menubar)
-        self.menuMain.setObjectName("menuMain")
-        self.menuUser = QtWidgets.QMenu(self.menubar)
-        self.menuUser.setObjectName("menuUser")
-        MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
-        self.menubar.addAction(self.menuMain.menuAction())
-        self.menubar.addAction(self.menuUser.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -276,8 +266,6 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.label_id.setText(_translate("MainWindow", "Employee ID :"))
         self.label_gender.setText(_translate("MainWindow", "Gender :"))
         self.pushButto_edit.setText(_translate("MainWindow", "Edit"))
-        self.menuMain.setTitle(_translate("MainWindow", "Main"))
-        self.menuUser.setTitle(_translate("MainWindow", "User"))
 
     def csvUpload(self):
         self.csv_name = QtWidgets.QFileDialog.getOpenFileName(
