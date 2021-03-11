@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(30, 31, 28);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label_serial">
     <property name="geometry">
@@ -28,6 +31,9 @@
       <family>OCR A Std</family>
       <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Serial Number</string>
@@ -51,6 +57,9 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
    </widget>
    <widget class="QPushButton" name="pushButto_granted">
     <property name="geometry">
@@ -68,6 +77,10 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(189, 255, 148);
+border-radius: 10px;</string>
     </property>
     <property name="text">
      <string>Granted</string>
@@ -89,6 +102,10 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(189, 255, 148);
+border-radius: 10px;</string>
     </property>
     <property name="text">
      <string>Denied</string>
@@ -130,6 +147,9 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
    </widget>
    <widget class="QLabel" name="label_output">
     <property name="geometry">
@@ -145,6 +165,9 @@
       <family>OCR A Std</family>
       <pointsize>12</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Output Folder :</string>
@@ -168,6 +191,10 @@
       <pointsize>11</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(180, 251, 255);
+border-radius: 10px;</string>
+    </property>
     <property name="text">
      <string>Upload</string>
     </property>
@@ -186,6 +213,9 @@
       <family>OCR A Std</family>
       <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Details</string>
@@ -209,6 +239,9 @@
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
      <string>Employee Name :</string>
     </property>
@@ -231,6 +264,9 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
    </widget>
    <widget class="QLabel" name="label_id">
     <property name="geometry">
@@ -246,6 +282,9 @@
       <family>OCR A Std</family>
       <pointsize>12</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Employee ID :</string>
@@ -269,6 +308,9 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
    </widget>
    <widget class="QLabel" name="label_gender">
     <property name="geometry">
@@ -284,6 +326,9 @@
       <family>OCR A Std</family>
       <pointsize>12</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Gender :</string>
@@ -307,6 +352,9 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
    </widget>
    <widget class="QPushButton" name="pushButto_edit">
     <property name="geometry">
@@ -324,6 +372,10 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(189, 255, 148);
+border-radius: 10px;</string>
     </property>
     <property name="text">
      <string>Edit</string>
