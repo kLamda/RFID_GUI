@@ -9,18 +9,9 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import pandas as pd
-import sys
 
 
-class Window3(object):
-    def __init__(self, serial, name, id_no, gender, db):
-        self.name = name
-        self.serial = serial
-        self.id = id_no
-        self.gender = gender
-        self.db = db
-
+class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 492)
@@ -92,12 +83,9 @@ class Window3(object):
         self.label_serial_edit.setFont(font)
         self.label_serial_edit.setStyleSheet("color: rgb(255, 255, 255)")
         self.label_serial_edit.setObjectName("label_serial_edit")
-        self.textBrowser_edit_serial = QtWidgets.QTextBrowser(
-            self.centralwidget)
-        self.textBrowser_edit_serial.setGeometry(
-            QtCore.QRect(210, 76, 561, 51))
-        self.textBrowser_edit_serial.setStyleSheet(
-            "color: rgb(255, 255, 255);")
+        self.textBrowser_edit_serial = QtWidgets.QTextBrowser(self.centralwidget)
+        self.textBrowser_edit_serial.setGeometry(QtCore.QRect(210, 76, 561, 51))
+        self.textBrowser_edit_serial.setStyleSheet("color: rgb(255, 255, 255);")
         self.textBrowser_edit_serial.setObjectName("textBrowser_edit_serial")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(660, 390, 111, 41))
@@ -108,7 +96,7 @@ class Window3(object):
         font.setWeight(75)
         self.pushButton.setFont(font)
         self.pushButton.setStyleSheet("background-color: rgb(170, 255, 127);\n"
-                                      "border-radius : 10px;")
+"border-radius : 10px;")
         self.pushButton.setObjectName("pushButton")
         self.label_prog = QtWidgets.QLabel(self.centralwidget)
         self.label_prog.setGeometry(QtCore.QRect(25, 400, 161, 31))
@@ -118,7 +106,6 @@ class Window3(object):
         self.label_prog.setFont(font)
         self.label_prog.setText("")
         self.label_prog.setObjectName("label_prog")
-        self.label_prog.setStyleSheet("color: rgb(255, 255, 255);")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
@@ -131,31 +118,9 @@ class Window3(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-        self.textBrowser_edit_serial.setText(str(self.serial))
-        self.lineEdit_name.setText(str(self.name))
-        self.lineEdit_id.setText(self.id)
-        self.lineEdit_gender.setText(self.gender)
-
-        self.pushButton.clicked.connect(self.submit_detail)
-
-    def submit_detail(self):
-        self.data = pd.read_csv(self.db)
-        if self.serial in self.data.Serial.unique():
-            self.data.loc[self.data.Serial==self.serial, 'Name'] = self.lineEdit_name.text()
-            self.data.loc[self.data.Serial==self.serial, 'Employee ID'] = self.lineEdit_id.text()
-            self.data.loc[self.data.Serial == self.serial,
-                          'Gender'] = self.lineEdit_gender.text()
-        else:
-            self.data.loc[len(self.data.index)] = [
-                self.serial, self.lineEdit_name.text(), self.lineEdit_id.text(), self.lineEdit_gender.text()]
-        
-        print(self.data)
-        self.data.to_csv(self.db, index = False)
-        self.label_prog.setText("CSV file Updated")
-
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Update/Register"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_name_edit.setText(_translate("MainWindow", "Name :"))
         self.label.setText(_translate("MainWindow", "Fill"))
         self.label_id_edit.setText(_translate("MainWindow", "Employee ID :"))
@@ -164,12 +129,11 @@ class Window3(object):
         self.pushButton.setText(_translate("MainWindow", "Submit"))
 
 
-# if __name__ == "__main__":
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-#     MainWindow = QtWidgets.QMainWindow()
-#     ui = Ui_MainWindow(1111, None, "118ME0457", "Male")
-#     print(ui.submit_detail)
-#     ui.setupUi(MainWindow)
-#     MainWindow.show()
-#     sys.exit(app.exec_())
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
