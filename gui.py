@@ -224,7 +224,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         if args.db:
             self.data = pd.read_csv(args.db)
         if args.s in self.data.Serial.unique() :
-            self.pushButto_granted.setStyleSheet('background-color : green')
+            self.pushButto_granted.setStyleSheet('background-color : green; border-radius : 10px')
             self.pushButto_register.hide()
             self.pushButto_edit.show()
             print(self.data.loc[self.data['Serial'] == args.s].to_numpy()[0].tolist())
@@ -237,7 +237,8 @@ class Ui_MainWindow(QtWidgets.QWidget):
             self.textBrowser_gender.setText(self.data.loc[self.data['Serial']==args.s].Gender.to_numpy()[0])
             self.pushButto_edit.clicked.connect(self.register)
         else:
-            self.pushButto_denied.setStyleSheet('background-color : red')
+            self.pushButto_denied.setStyleSheet(
+                'background-color : red; border-radius : 10px')
             self.pushButto_register.show()
             self.pushButto_edit.hide()
             self.textBrowser_name.setText("Invalid")
@@ -252,10 +253,6 @@ class Ui_MainWindow(QtWidgets.QWidget):
             f.close()
 
     def register(self):
-        # name, done1 = QtWidgets.QInputDialog.getText(self, 'Input Dialog', "enter Name")
-        # self.w = Window2()
-        # self.w.show()
-        # self.hide()
         self.w = QtWidgets.QMainWindow()
         print(self.final)
         self.u = Window3(self.final[1], self.final[2], self.final[3], self.final[4], args.db)
