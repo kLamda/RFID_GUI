@@ -255,6 +255,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "GUI"))
+        MainWindow.setWindowIcon(QtGui.QIcon('images/favicon.ico'))
         self.label_serial.setText(_translate("MainWindow", "Serial Number"))
         self.pushButto_granted.setText(_translate("MainWindow", "Granted"))
         self.pushButto_denied.setText(_translate("MainWindow", "Denied"))

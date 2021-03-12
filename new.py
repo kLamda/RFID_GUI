@@ -156,6 +156,7 @@ class Window3(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Update/Register"))
+        MainWindow.setWindowIcon(QtGui.QIcon('images/favicon.ico'))
         self.label_name_edit.setText(_translate("MainWindow", "Name :"))
         self.label.setText(_translate("MainWindow", "Fill"))
         self.label_id_edit.setText(_translate("MainWindow", "Employee ID :"))
